@@ -29,11 +29,12 @@
         }
         section {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: left;
+            text-align: center;
             padding: 20px;
-            gap: 30px;
+            gap: 20px;
             min-height: 60vh;
             opacity: 0;
             transform: translateY(50px);
@@ -44,8 +45,9 @@
             transform: translateY(0);
         }
         section img {
-            max-width: 100%;
+            max-width: 90%; /* Giảm kích thước tối đa cho ảnh */
             height: auto;
+            max-height: 300px; /* Giới hạn chiều cao để ảnh không quá lớn */
             border-radius: 10px;
             transition: transform 0.3s ease, opacity 0.3s ease;
             mix-blend-mode: multiply;
@@ -53,22 +55,22 @@
         }
         section h2 {
             font-family: 'Baloo 2', cursive;
-            font-size: 5em;
+            font-size: 1.6em;
             text-transform: uppercase;
             margin: 0 0 10px;
             letter-spacing: 2px;
             color: #0056b3;
         }
         section .hook {
-            font-size: 1.5em;
+            font-size: 1em;
             color: #FF9800;
-            max-width: 500px;
+            max-width: 90%;
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         section p {
-            font-size: 1.2em;
-            max-width: 500px;
+            font-size: 0.9em;
+            max-width: 90%;
             line-height: 1.6;
             text-align: justify;
             color: #555;
@@ -87,29 +89,30 @@
         }
         #intro {
             background-color: #ffffff;
-            padding: 50px 20px;
+            padding: 15px 10px;
             text-align: center;
         }
         #intro h1 {
             font-family: 'Baloo 2', cursive;
-            font-size: 4em;
-            margin-bottom: 20px;
+            font-size: 1.8em;
+            margin-bottom: 15px;
             color: #0056b3;
         }
         #intro p {
-            font-size: 1.5em;
-            max-width: 800px;
+            font-size: 0.95em;
+            max-width: 90%;
             margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #555;
         }
 
-            @media (max-width: 576px) {
+        @media (max-width: 576px) {
             section {
                 padding: 10px;
             }
             section img {
                 max-width: 80%;
+                max-height: 200px; /* Giới hạn chiều cao cho ảnh trên thiết bị nhỏ */
                 margin-bottom: 15px;
             }
             section h2 {
@@ -137,6 +140,7 @@
             }
             section img {
                 max-width: 50%;
+                max-height: 300px; /* Giới hạn chiều cao cho ảnh trên máy tính bảng */
             }
             section h2 {
                 font-size: 2.5em;
@@ -160,6 +164,7 @@
         @media (min-width: 1200px) {
             section img {
                 max-width: 40%;
+                max-height: 400px; /* Giới hạn chiều cao cho ảnh trên màn hình lớn */
             }
             section h2 {
                 font-size: 3em;
