@@ -44,7 +44,7 @@
             transform: translateY(0);
         }
         section img {
-            max-width: 350px;
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
             transition: transform 0.3s ease, opacity 0.3s ease;
@@ -102,6 +102,74 @@
             margin: 0 auto;
             line-height: 1.8;
             color: #555;
+        }
+
+            @media (max-width: 576px) {
+            section {
+                padding: 10px;
+            }
+            section img {
+                max-width: 80%;
+                margin-bottom: 15px;
+            }
+            section h2 {
+                font-size: 1.4em;
+            }
+            section .hook {
+                font-size: 0.95em;
+            }
+            section p {
+                font-size: 0.85em;
+                max-width: 95%;
+            }
+            #intro h1 {
+                font-size: 1.6em;
+            }
+            #intro p {
+                font-size: 0.85em;
+            }
+        }
+
+        @media (min-width: 768px) {
+            section {
+                flex-direction: row;
+                text-align: left;
+            }
+            section img {
+                max-width: 50%;
+            }
+            section h2 {
+                font-size: 2.5em;
+            }
+            section .hook {
+                font-size: 1.3em;
+                max-width: 500px;
+            }
+            section p {
+                font-size: 1.1em;
+                max-width: 500px;
+            }
+            #intro h1 {
+                font-size: 2.5em;
+            }
+            #intro p {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            section img {
+                max-width: 40%;
+            }
+            section h2 {
+                font-size: 3em;
+            }
+            section .hook {
+                font-size: 1.4em;
+            }
+            section p {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
